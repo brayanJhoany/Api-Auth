@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "8a9403c2-dd98-4f02-8de0-a91319eb5997",
+		"name": "Entrevista",
+		"description": "Api ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Brayan Escobar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "brayan.escobar@live.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"new"
+					]
+				},
+				"description": "Registro de nuevo usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "brayan.escobar@live.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Inicio de sesion del usuario previamente registrado"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1lIjoiQnJheWFuIEVzY29iYXIiLCJlbWFpbCI6ImJyYXlhbi5lc2NvYmFyQGxpdmUuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3ODkifQ.nPVHLvbtv2FCXUBHOe6K_5uVcXUNHlkr-_BlzozCyCU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"me"
+					]
+				},
+				"description": "Informacion a traves del metodo show del usuario registrado"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/me?name=Brayan editado&email=test@live.com&password=1234567891",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1lIjoiQnJheWFuIEVzY29iYXIiLCJlbWFpbCI6ImJyYXlhbi5lc2NvYmFyQGxpdmUuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3ODkifQ.nPVHLvbtv2FCXUBHOe6K_5uVcXUNHlkr-_BlzozCyCU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/me?name=Brayan editado&email=test@live.com&password=1234567891",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"me"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Brayan editado"
+						},
+						{
+							"key": "email",
+							"value": "test@live.com"
+						},
+						{
+							"key": "password",
+							"value": "1234567891"
+						}
+					]
+				},
+				"description": "Modificaciòn de la informaciòn registrada del usuario registrado"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1lIjoiQnJheWFuIEVzY29iYXIiLCJlbWFpbCI6ImJyYXlhbi5lc2NvYmFyQGxpdmUuY29tIiwicGFzc3dvcmQiOiIxMjM0NTY3ODkifQ.nPVHLvbtv2FCXUBHOe6K_5uVcXUNHlkr-_BlzozCyCU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"me"
+					]
+				},
+				"description": "Eliminaciòn de la cuenta del usuario."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
