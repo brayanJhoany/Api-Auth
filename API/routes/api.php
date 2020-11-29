@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/index',[UserController::class,'index']);
+Route::post('/login', [UserController::class,'login']);
+Route::post('/new', [UserController::class,'register']);
+
+Route::group(['middleware' => ['jwt']], function () {
+    Route::get('/me', [UserController::class, 'show']);
+    Route::put('/me', [UserController::class, 'update']);
+    Route::delete('/me', [UserController::class, 'delete']);
 });
