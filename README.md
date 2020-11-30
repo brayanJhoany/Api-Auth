@@ -12,4 +12,5 @@ de api, luego ejecutar los siguientes comandos.
 1.php artisan migrate
 2.php artisan serve
 
-finalmente, puede realizar las pruebas en postman.
+finalmente, puede realizar las pruebas en postman
+Link postman: https://www.getpostman.com/collections/c8ddd0cad112cb5dd0ae
